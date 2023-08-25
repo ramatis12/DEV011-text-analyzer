@@ -1,14 +1,16 @@
-
-const text = document.querySelector("suer-input");
-
-
 const analyzer = {  
   getWordCount: (text) => {
     //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
-    console.log("The empty string has a length of " + text.length);
+    let pal= text.split(" ");
+    return pal.length;
   },
   getCharacterCount: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
+    let item= 0;
+       for (let i = 0; i <text.length; i++) {
+              item++; 
+        }
+     return item; 
   },
   getCharacterCountExcludingSpaces: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.

@@ -15,24 +15,12 @@ import analyzer from './analyzer.js';
         const media = document.querySelector(".media");
 
 
-       let contador = text.addEventListener("keyup", logKey);
+       text.addEventListener("keyup", (primera) =>{
+        palabra.innerHTML = analyzer.getWordCount(text.value);
+        caracter.innerHTML = analyzer.getCharacterCount(text.value); 
 
-        function logKey() {
-                const analyzer = {  
-                         getWordCount: (text) => {
-                                var texto = document.getElementsByName("suer-input").valor;
-                                let item= 0;
-                          //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
-                          for (let i = 0; i < texto.length; i++) {
-                                item += texto[i]; 
-                              }
-                              return item;   
-                        }
-                } 
-                console.log(analyzer); 
-
-        }
-        
+       });
+       
          // text.addEventListener("keyup", analyzer)     
         // text.addEventListener("click", text, false);
        // console.log(text);
