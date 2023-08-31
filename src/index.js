@@ -18,7 +18,8 @@ text.addEventListener("keyup", () => {
   caracter.innerHTML = analyzer.getCharacterCount(text.value);
   espacio.innerHTML = analyzer.getCharacterCountExcludingSpaces(text.value);
   numero.innerHTML = analyzer.getNumberCount(text.value);
-  //suma.innerHTML = analyzer.getNumberSum(text.value);
+  suma.innerHTML = analyzer.getNumberSum(text.value);
+  media.innerHTML = analyzer.getAverageWordLength(text.value);
 });
 
 //funcion para limpiar el contenido de textarea
